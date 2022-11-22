@@ -576,7 +576,8 @@ img {
   transition: transform var(--timing);
 }
 
-.example-item:hover .overlay {
+.example-item:hover .overlay,
+.example-item:focus .overlay {
   transform: translateY(0);
 }
 

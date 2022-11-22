@@ -530,8 +530,13 @@ img {
 
 .example-item {
   flex-basis: calc((100% - 60px) / 3);
+  transition: box-shadow var(--timing);
 }
 
+.example-item:hover,
+.example-item:focus {
+  box-shadow: var(--portfolio-link-shadow);
+}
 .example-wrap {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
@@ -555,11 +560,6 @@ img {
   transition: box-shadow var(--timing);
 }
 
-.example-item:hover,
-.example-item:focus {
-  box-shadow: var(--portfolio-link-shadow);
-}
-
 .example-thumb {
   position: relative;
   overflow: hidden;
@@ -576,7 +576,7 @@ img {
   transition: transform var(--timing);
 }
 
-.example-thumb:hover .overlay {
+.example-item:hover .overlay {
   transform: translateY(0);
 }
 

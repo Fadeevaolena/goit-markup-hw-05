@@ -503,7 +503,10 @@ img {
 .menu-item:not(:last-child) {
   margin-right: 8px;
 }
+
 .menu-btn {
+  min-width: 73px;
+  height: 38px;
   padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
@@ -512,12 +515,24 @@ img {
   color: var(--first-gray);
   background-color: var(--background-light-gray);
   border: none;
-  transform: scale(1);
+  border-radius: 4px;
   transition: transform var(--timing), color var(--timing), background-color var(--timing),
-    box-shadow var(--timing);
+  box-shadow var(--timing);
 }
 .menu-btn:hover,
 .menu-btn:focus {
+  color: var(--titel-white);
+  background-color: var(--effect-color);
+  box-shadow: var(--but-portfolio-shadow);
+  transform: scale(1.1);
+}
+
+.menu-input:hover +.menu-btn,
+.menu-input:focus +.menu-btn
+{transform: scale(1.2);
+}
+
+.menu-input:checked +.menu-btn {
   color: var(--titel-white);
   background-color: var(--effect-color);
   box-shadow: var(--but-portfolio-shadow);
@@ -907,4 +922,19 @@ margin: 0 auto;
       background-color: #188ce8;
 }
 
+.filter-btn{
+padding: 6px 22px;
+display: block;
+background-color: teal;
 
+}
+
+.filter-list{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
+.filter-input:checked + .filter-btn {
+background-color: orangered;
+color: #FFFFFF;
+}
